@@ -32,7 +32,7 @@ class App extends Component {
       <Header  style={{ padding: '10px' }} >
         {/* <div className="logo" /> */}
         <Button icon={<AiFillGithub/>} title={'View code on github'} target='_blanc'  type='type'
-        className={'gh'}  href='https://github.com' ></Button>
+        className={'gh'}  href='https://github.com/warrieka/benford' ></Button>
       </Header>
       <Content style={{ padding: '0 50px' }}>
         <div>

@@ -1,6 +1,8 @@
 Benford's Law 
 =============
 
+<https://warrieka.github.io/benford>
+
 Benford's law, describes frequency distribution of the initial digit of numbers in data sets.<br/>
 In a natural series of digits, the starting digit is more likely to be a lower digit.<br/>
 So 1 is more common than 2, 2 is more common than 3, etc.<br/><br/>
