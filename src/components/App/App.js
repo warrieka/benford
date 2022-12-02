@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {AiOutlineCloudUpload} from 'react-icons/ai'
+import {AiOutlineCloudUpload, AiFillGithub, AiFillLinkedin, AiOutlineMail} from 'react-icons/ai'
 
 import Grafiek from '../Grafiek/Grafiek';
 import papa from 'papaparse';
@@ -27,15 +27,17 @@ class App extends Component {
 
   render() {
     return (
-      <Layout className="layout">
-      <Header>
-        <div className="logo" />
+    <Layout className="layout">
+      <Header  style={{ padding: '10px' }} >
+        {/* <div className="logo" /> */}
+        <Button icon={<AiFillGithub/>} title={'View code on github'} target='_blanc'  type='type'
+        className={'gh'}  href='https://github.com' ></Button>
       </Header>
       <Content style={{ padding: '0 50px' }}>
         <div>
         <Title>Benford's Law</Title>
         <Upload accept='.csv' name={'file'} maxCount={1} beforeUpload={this.newFile}>
-          <Button icon={<AiOutlineCloudUpload />} >&nbsp;Click to Upload</Button>
+          <Button className={'btn'} icon={<AiOutlineCloudUpload />} >&nbsp;Click to Upload</Button>
         </Upload>
         </div>
 
@@ -43,7 +45,16 @@ class App extends Component {
            <Grafiek data={this.state.data} ></Grafiek>
         </div>
       </Content>
-      <Footer style={{ textAlign: 'center' }}>Door Kay Warrie</Footer>
+      <Footer style={{ textAlign: 'center' }}>By Kay Warrie<br/>
+      <Button title='Linkedin'  icon={<AiFillLinkedin color='darkblue'/>}
+        href='https://www.linkedin.com/in/kay-warrie-7143467/' target='_blanc' >
+      </Button>
+      <Button title='Github' icon={<AiFillGithub/>}
+        href='https://github.com/warrieka/' target='_blanc' >
+      </Button>
+      <Button  title='Email' icon={<AiOutlineMail/>} href='mailto:kaywarrie@gmail.com' >
+      </Button>
+      </Footer>
     </Layout>
     )
   }

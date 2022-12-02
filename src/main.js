@@ -5,7 +5,7 @@ import App from './components/App/App';
 
 const root = ReactDOMClient.createRoot( document.getElementById('root') );
 root.render(
-  <IconContext.Provider value={{ color: 'blue', size: '18px' }}>
+  <IconContext.Provider value={{ color: 'gray', size: '22px' }}>
     <App />
   </IconContext.Provider>
 );
