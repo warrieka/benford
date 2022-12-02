@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {MathJax} from "better-react-mathjax";
 import {AiOutlineCloudUpload, AiFillGithub, AiFillLinkedin, AiOutlineMail} from 'react-icons/ai'
 
 import Grafiek from '../Grafiek/Grafiek';
@@ -36,11 +37,21 @@ class App extends Component {
       <Content style={{ padding: '0 50px' }}>
         <div>
         <Title>Benford's Law</Title>
+        <div>
+          Benford's law, (Benford's law) describes frequency distribution of the initial digit of numbers in data sets.<br/>
+          In a natural series of digits, the starting digit is more likely to be a lower digit.<br/>
+          So 1 is more common than 2, 2 is more common than 3, etc.<br/><br/>
+
+          This formula as determined in 1938 by Frank Albert Benford describes this distribution: 
+          <MathJax inline dynamic>
+          {`$$P(d) = log_{10} (1 + \\frac{1}{d})$$`}
+          </MathJax>
+          Use the tool below to test your csv-dataset. Alle fields with a number in first row will be tested. 
+        </div>
         <Upload accept='.csv' name={'file'} maxCount={1} beforeUpload={this.newFile}>
           <Button className={'btn'} icon={<AiOutlineCloudUpload />} >&nbsp;Click to Upload</Button>
         </Upload>
         </div>
-
         <div className="site-layout-content">
            <Grafiek data={this.state.data} ></Grafiek>
         </div>
