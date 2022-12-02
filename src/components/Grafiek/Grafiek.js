@@ -34,7 +34,10 @@ class Grafiek extends Component {
 
   componentDidUpdate(prevProps) {
     if (this.props === prevProps) return;
-    if (!this.props.data.length) return;
+    if (this.props.data.length == 0){
+      this.resetGrafiek();
+      return;
+    } 
 
     this.resetGrafiek();
     let firstRow  = this.props.data[0]
